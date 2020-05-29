@@ -24,9 +24,8 @@ for radicals_contents in radical_block.find_all('tr'):
     # Meaning
     radical_meaning = radicals_contents.find('td', class_='column-4')
     print(radical_meaning.text)
-  
     print()
 
+    # write everything above into csv file
     csv_writer.writerow([radical_chars.text, radical_reading.text, radical_meaning.text])
-
 csv_file.close()
